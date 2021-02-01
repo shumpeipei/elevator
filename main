@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args){
+
+        Scanner sc = new Scanner(System.in);
+
+        int count = sc.nextInt();//入力される行数
+        int floor_a =1;
+        int floor_b =0;
+        int total_floor =0;      //移動合計フロア
+        int i =1;
+
+        //入力される値分計算
+        while(count>=i) {
+            floor_b = sc.nextInt();
+            
+            total_floor  += floor_a < floor_b  ? floor_b-floor_a : floor_a-floor_b;
+            floor_a = floor_b;
+
+            i ++;
+        }
+
+
+
+
+        System.out.println(total_floor);
+    }
+}
